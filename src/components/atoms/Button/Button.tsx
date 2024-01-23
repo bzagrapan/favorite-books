@@ -1,19 +1,19 @@
 import React, { ButtonHTMLAttributes } from 'react';
-import './CloudButton.scss';
+import './Button.scss';
 
-export interface CloudButtonProps
+export interface CustomButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
 }
 
-const CloudButton = (props: CloudButtonProps) => {
+const CustomButton = (props: CustomButtonProps) => {
   const { text } = props;
 
   return (
-    <button className="cloud-button">
+    <button className="custom-button">
       <h1>{text}</h1>
     </button>
   );
 };
 
-export default CloudButton;
+export default CustomButton;

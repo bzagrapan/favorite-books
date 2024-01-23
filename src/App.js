@@ -1,10 +1,10 @@
 import './App.css';
-import CloudButton from './components/atoms/CloudButton/CloudButton';
+import CustomButton from './components/atoms/Button/Button';
 
 function App() {
   return (
     <div className="App">
-      <CloudButton text="brekeke" />
+      <CustomButton text="Uložiť" />
     </div>
   );
 }
