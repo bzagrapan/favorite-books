@@ -1,0 +1,34 @@
+@import '../../../utils/variables';
+
+.custom-input {
+  display: block;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #67b2e4;
+  transition: border-color 0.5s ease;
+
+  &:focus-visible {
+    outline: #1f74ad;
+    border-color: #1f74ad;
+  }
+
+  &.warning {
+    border: 2px solid #ff4d4d;
+
+    &:focus-visible {
+      outline: #e60000;
+      border-color: #e60000;
+    }
+  }
+}
+
+.custom-input-wrapper {
+  display: inline-block;
+}
+
+.input-warning {
+  font-size: 11px;
+  float: right;
+  color: #ff4d4d;
+}

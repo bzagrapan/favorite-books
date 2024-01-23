@@ -6,12 +6,12 @@ export interface CustomButtonProps
   text: string;
 }
 
-const CustomButton = (props: CustomButtonProps) => {
+const CustomButton: React.FC<CustomButtonProps> = (props) => {
   const { text } = props;
 
   return (
     <button className="custom-button">
-      <h1>{text}</h1>
+      <h2>{text}</h2>
     </button>
   );
 };
