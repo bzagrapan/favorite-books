@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './SavedBook.scss';
 import { ISavedBook } from '../../../models/book';
 import Modal from 'react-modal';
-import BookDetail from '../../molecules/BookDetail/BookDetail';
+import BookDetail from '../../atoms/BookDetail/BookDetail';
 
 export interface SavedBookProps extends ISavedBook {}
 
