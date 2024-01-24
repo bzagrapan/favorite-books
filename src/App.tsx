@@ -1,22 +1,35 @@
+import { useState } from 'react';
 import './App.scss';
 import AddBook from './components/molecules/AddBook/AddBook';
-import SavedBook from './components/molecules/SavedBook/SavedBook';
 import { ISavedBook } from './models/book';
+import BookList from './components/organisms/BookList/BookList';
 
 function App() {
+  const [savedBooks, setSavedBooks] = useState<ISavedBook[]>([]);
+
   const handleInputChange = (newValue: string) => {
     console.log(newValue);
   };
 
   const handleBookSave = (newBook: ISavedBook) => {
     console.log(newBook);
+    setSavedBooks([...savedBooks, newBook]);
   };
 
   return (
     <div className="App">
-      <AddBook onBookSave={(newBook: ISavedBook) => handleBookSave(newBook)} />
-      <div style={{ margin: '20px' }}></div>
-      <SavedBook title="Pietro Mascarpone a asdf sdfdsf sdfds fd sd" />
+      <div className="main-wrapper">
+        <div className="first-section">
+          <div className="header-wrapper">
+            Please, enter informations about your new favorite book.
+          </div>
+          <AddBook onBookSave={handleBookSave} />
+        </div>
+        <div className="second-section">
+          <div className="header-wrapper">List of saved books</div>
+          <BookList books={savedBooks} />
+        </div>
+      </div>
     </div>
   );
 }

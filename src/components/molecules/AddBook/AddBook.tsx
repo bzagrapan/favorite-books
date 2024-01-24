@@ -50,6 +50,7 @@ const AddBook: React.FC<AddBookProps> = (props) => {
         <CustomInput
           placeholder="Book description"
           onInputChange={(newValue: string) => setBookDescription(newValue)}
+          maxChars={300}
         />
       </div>
       <CustomButton text="Save" onClick={() => handleBookSave()} />

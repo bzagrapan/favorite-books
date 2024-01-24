@@ -1,10 +1,45 @@
+@import './utils/variables';
+
 .App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: #e6e6e6;
-  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.main-wrapper {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 800px;
+  gap: 100px;
+  box-sizing: border-box;
+}
+
+.header-wrapper {
+  border-bottom: 1px solid grey;
+  height: 100px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+@mixin section-style {
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #d9d9d9;
+  max-height: 800px;
+  overflow: auto;
+  border-radius: $border-radius;
+}
+
+.first-section {
+  @include section-style;
+}
+
+.second-section {
+  @include section-style;
 }
