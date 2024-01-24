@@ -16,6 +16,17 @@
   width: 800px;
   gap: 100px;
   box-sizing: border-box;
+
+  @media (max-width: $breakpoint-tablet) {
+    gap: 25px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 0;
+    grid-template-columns: initial;
+    grid-template-rows: 1fr 1fr;
+    width: initial;
+  }
 }
 
 .header-wrapper {
@@ -25,6 +36,21 @@
   margin-bottom: 50px;
   font-size: larger;
   font-weight: bold;
+
+  &.basic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 15px;
+      height: 50px;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 15px;
+  }
 }
 
 @mixin section-style {
@@ -34,14 +60,29 @@
   max-height: 800px;
   overflow: auto;
   border-radius: $border-radius;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-height: 600px;
+  }
 }
 
 .first-section {
   @include section-style;
+
+  @media (max-width: $breakpoint-mobile) {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
 }
 
 .second-section {
   @include section-style;
+
+  @media (max-width: $breakpoint-mobile) {
+    max-width: 600px;
+    max-height: 400px;
+  }
 }
 
 .book-filter {
@@ -49,8 +90,16 @@
   justify-content: end;
   font-size: medium;
   margin-top: 30px;
+
+  @media (max-width: $breakpoint-mobile) {
+    display: inline-block;
+  }
 }
 
 .book-filter-label {
   margin: auto;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-right: 15px;
+  }
 }

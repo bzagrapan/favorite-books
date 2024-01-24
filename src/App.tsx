@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <div className="main-wrapper">
         <div className="first-section">
-          <div className="header-wrapper">
+          <div className="header-wrapper basic">
             Please, enter informations about your new favorite book.
           </div>
           <AddBook onBookSave={handleBookSave} />

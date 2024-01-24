@@ -1,3 +1,5 @@
+@import '../../../utils/variables';
+
 .add-book-wrapper {
   display: flex;
   flex-direction: column;
@@ -7,13 +9,25 @@
 .add-book-row {
   display: flex;
   gap: 10px;
+
+  @media (max-width: $breakpoint-mobile) {
+    justify-content: center;
+  }
 }
 
 .add-book-row-label {
   width: 100px;
   margin: auto;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0;
+  }
 }
 
 .big-margin {
   margin-bottom: 30px;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 5px;
+  }
 }

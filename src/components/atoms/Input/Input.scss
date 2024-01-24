@@ -26,12 +26,21 @@
 
 .custom-input {
   @include default-input;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .custom-textArea {
   @include default-input;
   height: 150px;
   resize: none;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 75px;
+    width: 100%;
+  }
 }
 
 .custom-input-wrapper {
