@@ -1,6 +1,6 @@
 @import '../../../utils/variables';
 
-.custom-input {
+@mixin default-input {
   display: block;
   padding: 5px;
   font-size: 16px;
@@ -22,6 +22,16 @@
       border-color: #e60000;
     }
   }
+}
+
+.custom-input {
+  @include default-input;
+}
+
+.custom-textArea {
+  @include default-input;
+  height: 150px;
+  resize: none;
 }
 
 .custom-input-wrapper {

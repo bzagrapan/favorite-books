@@ -7,11 +7,18 @@ export interface CustomInputProps {
   warningText?: string;
   onInputChange: Function;
   maxChars?: number;
+  isTextArea?: boolean;
 }
 
 const CustomInput: React.FC<CustomInputProps> = (props) => {
-  const { placeholder, displayWarning, warningText, onInputChange, maxChars } =
-    props;
+  const {
+    placeholder,
+    displayWarning,
+    warningText,
+    onInputChange,
+    maxChars,
+    isTextArea,
+  } = props;
 
   const [userInput, setUserInput] = useState<string>();
 
@@ -24,12 +31,21 @@ const CustomInput: React.FC<CustomInputProps> = (props) => {
 
   return (
     <div className="custom-input-wrapper">
-      <input
-        className={errorState ? 'custom-input warning' : 'custom-input'}
-        placeholder={placeholder}
-        onChange={(e) => handleOnChange(e?.target?.value)}
-        maxLength={maxChars}
-      ></input>
+      {isTextArea ? (
+        <textarea
+          className={errorState ? 'custom-textArea warning' : 'custom-textArea'}
+          placeholder={placeholder}
+          onChange={(e) => handleOnChange(e?.target?.value)}
+          maxLength={maxChars}
+        />
+      ) : (
+        <input
+          className={errorState ? 'custom-input warning' : 'custom-input'}
+          placeholder={placeholder}
+          onChange={(e) => handleOnChange(e?.target?.value)}
+          maxLength={maxChars}
+        ></input>
+      )}
       {errorState && <div className="input-warning">{warningText}</div>}
     </div>
   );
