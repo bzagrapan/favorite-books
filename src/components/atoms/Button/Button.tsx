@@ -10,7 +10,7 @@ const CustomButton: React.FC<CustomButtonProps> = (props) => {
   const { text } = props;
 
   return (
-    <button className="custom-button">
+    <button className="custom-button" onClick={props.onClick}>
       <h2>{text}</h2>
     </button>
   );

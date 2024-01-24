@@ -5,13 +5,13 @@ import { ISavedBook } from '../../../models/book';
 export interface BookDetailProps extends ISavedBook {}
 
 const BookDetail: React.FC<BookDetailProps> = (props) => {
-  const { name, author, description } = props;
+  const { title, author, description } = props;
 
   return (
     <div>
       <div className="book-detail-row">
-        <b>Name:</b>
-        <span>{name}</span>
+        <b>Title:</b>
+        <span>{title}</span>
       </div>
       <div className="book-detail-row">
         <b>Author:</b>

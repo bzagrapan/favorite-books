@@ -1,5 +1,5 @@
 export interface ISavedBook {
-  name: string;
+  title: string;
   author?: string;
   description?: string;
 }

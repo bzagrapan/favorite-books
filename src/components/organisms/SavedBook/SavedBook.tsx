@@ -19,14 +19,14 @@ const customStyles = {
 };
 
 const SavedBook: React.FC<SavedBookProps> = (props) => {
-  const { name } = props;
+  const { title } = props;
 
   const [isDetailOpen, setIsDetailOpen] = useState(false);
 
   return (
     <>
       <div className="saved-book" onClick={() => setIsDetailOpen(true)}>
-        {name}
+        {title}
       </div>
       <Modal
         isOpen={isDetailOpen}

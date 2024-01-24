@@ -1,0 +1,19 @@
+.add-book-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-book-row {
+  display: flex;
+  gap: 10px;
+}
+
+.add-book-row-label {
+  width: 100px;
+  margin: auto;
+}
+
+.big-margin {
+  margin-bottom: 40px;
+}
