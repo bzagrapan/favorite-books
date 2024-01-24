@@ -6,6 +6,7 @@
   height: 100%;
   position: absolute;
   background-color: #e6e6e6;
+  flex-direction: column;
 }
 
 .App-logo {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './SavedBook.scss';
 import { ISavedBook } from '../../../models/book';
 import Modal from 'react-modal';
+import BookDetail from '../../molecules/BookDetail/BookDetail';
 
 export interface SavedBookProps extends ISavedBook {}
 
@@ -18,7 +19,7 @@ const customStyles = {
 };
 
 const SavedBook: React.FC<SavedBookProps> = (props) => {
-  const { name, author, description } = props;
+  const { name } = props;
 
   const [isDetailOpen, setIsDetailOpen] = useState(false);
 
@@ -35,20 +36,7 @@ const SavedBook: React.FC<SavedBookProps> = (props) => {
         shouldCloseOnOverlayClick
         ariaHideApp={false}
       >
-        <div>
-          <div className="book-detail-row">
-            <b>Name:</b>
-            <span>{name}</span>
-          </div>
-          <div className="book-detail-row">
-            <b>Author:</b>
-            <span>{author}</span>
-          </div>
-          <div className="book-detail-row">
-            <b>Description:</b>
-            <span>{description}</span>
-          </div>
-        </div>
+        <BookDetail {...props} />
       </Modal>
     </>
   );

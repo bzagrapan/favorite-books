@@ -1,7 +1,7 @@
 import './App.css';
 import CustomButton from './components/atoms/Button/Button';
 import CustomInput from './components/atoms/Input/Input';
-import SavedBook from './components/molecules/SavedBook/SavedBook';
+import SavedBook from './components/organisms/SavedBook/SavedBook';
 
 function App() {
   const handleInputChange = (newValue: string) => {
