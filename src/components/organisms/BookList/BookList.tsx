@@ -12,9 +12,13 @@ const BookList: React.FC<BookListProps> = (props) => {
 
   return (
     <div className="book-list">
-      {books.map((book: ISavedBook, index: number) => (
-        <SavedBook {...book} key={index} />
-      ))}
+      {books.length > 0 ? (
+        books.map((book: ISavedBook, index: number) => (
+          <SavedBook {...book} key={index} />
+        ))
+      ) : (
+        <div>Your list of favorite books is empty.</div>
+      )}
     </div>
   );
 };
