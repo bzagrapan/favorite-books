@@ -1,0 +1,25 @@
+@import '../../../utils/variables';
+
+.saved-book {
+  cursor: pointer;
+  border-radius: $border-radius;
+  background-color: #a52a2a;
+  width: 250px;
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #8e2525;
+    }
+  }
+}
+
+.book-detail-row {
+  display: flex;
+  gap: 5px;
+}
