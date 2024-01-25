@@ -18,6 +18,8 @@ const customStyles = {
     border: '1px solid #a52a2a',
     maxWidth: '350px',
     padding: '25px',
+    overflow: 'auto',
+    maxHeight: '600px',
   },
 };
 

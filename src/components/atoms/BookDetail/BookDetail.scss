@@ -1,4 +1,5 @@
-.book-detail-row {
-  display: flex;
-  gap: 5px;
+.book-detail-wrapper {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 10px;
 }

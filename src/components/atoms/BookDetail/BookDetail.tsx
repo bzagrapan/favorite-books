@@ -8,19 +8,13 @@ const BookDetail: React.FC<BookDetailProps> = (props) => {
   const { title, author, description } = props;
 
   return (
-    <div>
-      <div className="book-detail-row">
-        <b>Title:</b>
-        <span>{title}</span>
-      </div>
-      <div className="book-detail-row">
-        <b>Author:</b>
-        <span>{author ? author : 'unspecified author'}</span>
-      </div>
-      <div className="book-detail-row">
-        <b>Description:</b>
-        <span>{description ? description : 'unspecified description'}</span>
-      </div>
+    <div className="book-detail-wrapper">
+      <b>Title:</b>
+      <span>{title}</span>
+      <b>Author:</b>
+      <span>{author ? author : 'unspecified author'}</span>
+      <b>Description:</b>
+      <span>{description ? description : 'unspecified description'}</span>
     </div>
   );
 };
