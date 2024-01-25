@@ -26,6 +26,7 @@
       "dist",
   
     ],
-    "baseUrl": "http://localhost:3000"
+    "baseUrl": "http://localhost:3000",
+    "files": ["globals.d.ts"]
   }
   

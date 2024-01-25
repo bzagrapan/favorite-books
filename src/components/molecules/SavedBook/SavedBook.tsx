@@ -3,6 +3,7 @@ import './SavedBook.scss';
 import { ISavedBook } from '../../../models/book';
 import Modal from 'react-modal';
 import BookDetail from '../../atoms/BookDetail/BookDetail';
+import BookLogo from '../../../assets/book.svg';
 
 export interface SavedBookProps extends ISavedBook {}
 
@@ -27,7 +28,8 @@ const SavedBook: React.FC<SavedBookProps> = (props) => {
   return (
     <>
       <div className="saved-book" onClick={() => setIsDetailOpen(true)}>
-        {title}
+        <img alt="Book icon" src={BookLogo} height={20} />
+        <span>{title}</span>
       </div>
       <Modal
         isOpen={isDetailOpen}
