@@ -23,6 +23,10 @@
       border-color: #e60000;
     }
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 .custom-input {
