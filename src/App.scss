@@ -24,8 +24,9 @@
   @media (max-width: $breakpoint-mobile) {
     margin-top: 0;
     grid-template-columns: initial;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content auto;
     width: initial;
+    padding: 10px 0;
   }
 }
 
@@ -73,7 +74,6 @@
   @media (max-width: $breakpoint-mobile) {
     max-width: 600px;
     margin: auto;
-    margin-bottom: 20px;
   }
 }
 
@@ -82,7 +82,7 @@
 
   @media (max-width: $breakpoint-mobile) {
     max-width: 600px;
-    max-height: 400px;
+    max-height: initial;
   }
 }
 
