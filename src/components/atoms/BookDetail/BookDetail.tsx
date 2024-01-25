@@ -15,11 +15,11 @@ const BookDetail: React.FC<BookDetailProps> = (props) => {
       </div>
       <div className="book-detail-row">
         <b>Author:</b>
-        <span>{author}</span>
+        <span>{author ? author : 'unspecified author'}</span>
       </div>
       <div className="book-detail-row">
         <b>Description:</b>
-        <span>{description}</span>
+        <span>{description ? description : 'unspecified description'}</span>
       </div>
     </div>
   );

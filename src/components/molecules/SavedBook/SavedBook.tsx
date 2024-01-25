@@ -17,6 +17,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     border: '1px solid #a52a2a',
     maxWidth: '350px',
+    padding: '25px',
   },
 };
 
@@ -39,6 +40,9 @@ const SavedBook: React.FC<SavedBookProps> = (props) => {
         shouldCloseOnOverlayClick
         ariaHideApp={false}
       >
+        <div className="close-button" onClick={() => setIsDetailOpen(false)}>
+          X
+        </div>
         <BookDetail {...props} />
       </Modal>
     </>

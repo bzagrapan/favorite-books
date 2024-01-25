@@ -87,6 +87,10 @@
   @include section-style;
   height: min-content;
 
+  @media (max-width: $breakpoint-tablet) {
+    height: min-content;
+  }
+
   @media (max-width: $breakpoint-mobile) {
     max-width: 600px;
     margin: auto;
