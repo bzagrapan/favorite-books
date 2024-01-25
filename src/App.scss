@@ -10,7 +10,7 @@
 }
 
 .main-wrapper {
-  margin-top: 100px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 800px;
@@ -22,7 +22,7 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    margin-top: 0;
+    margin: 0;
     grid-template-columns: initial;
     grid-template-rows: min-content auto;
     width: initial;
@@ -59,17 +59,18 @@
   padding: 10px;
   box-sizing: border-box;
   background-color: #d9d9d9;
-  max-height: 800px;
   overflow: auto;
   border-radius: $border-radius;
 
   @media (max-width: $breakpoint-tablet) {
+    height: initial;
     max-height: 600px;
   }
 }
 
 .first-section {
   @include section-style;
+  height: min-content;
 
   @media (max-width: $breakpoint-mobile) {
     max-width: 600px;
@@ -79,6 +80,7 @@
 
 .second-section {
   @include section-style;
+  height: 80vh;
 
   @media (max-width: $breakpoint-mobile) {
     max-width: 600px;
