@@ -17,7 +17,10 @@ const BookList: React.FC<BookListProps> = (props) => {
           <SavedBook {...book} key={index} />
         ))
       ) : (
-        <div>Your list of favorite books is empty.</div>
+        <div className="empty">
+          Your list of favorite books is empty. Add some books firstly, or
+          change the filter.
+        </div>
       )}
     </div>
   );
