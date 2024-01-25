@@ -38,6 +38,7 @@ function App() {
                 <CustomInput
                   placeholder="Book title"
                   onInputChange={(newValue: string) => setFilter(newValue)}
+                  width="200px"
                 />
               </div>
             </div>

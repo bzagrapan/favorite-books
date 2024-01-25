@@ -8,6 +8,7 @@ export interface CustomInputProps {
   onInputChange: Function;
   maxChars?: number;
   isTextArea?: boolean;
+  width?: string;
 }
 
 const CustomInput: React.FC<CustomInputProps> = (props) => {
@@ -18,6 +19,7 @@ const CustomInput: React.FC<CustomInputProps> = (props) => {
     onInputChange,
     maxChars,
     isTextArea,
+    width,
   } = props;
 
   const [userInput, setUserInput] = useState<string>();
@@ -37,6 +39,7 @@ const CustomInput: React.FC<CustomInputProps> = (props) => {
           placeholder={placeholder}
           onChange={(e) => handleOnChange(e?.target?.value)}
           maxLength={maxChars}
+          style={{ width: width }}
         />
       ) : (
         <input
@@ -44,6 +47,7 @@ const CustomInput: React.FC<CustomInputProps> = (props) => {
           placeholder={placeholder}
           onChange={(e) => handleOnChange(e?.target?.value)}
           maxLength={maxChars}
+          style={{ width: width }}
         ></input>
       )}
       {errorState && <div className="input-warning">{warningText}</div>}

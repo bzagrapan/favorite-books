@@ -14,6 +14,8 @@ const AddBook: React.FC<AddBookProps> = (props) => {
   const [bookTitle, setBookTitle] = useState<string>();
   const [bookDescription, setBookDescription] = useState<string>();
 
+  const inputWidth = '200px';
+
   const handleBookSave = () => {
     if (!bookTitle) {
       setSaveError(true);
@@ -36,6 +38,7 @@ const AddBook: React.FC<AddBookProps> = (props) => {
           displayWarning={saveError}
           warningText="*Mandatory field"
           onInputChange={(newValue: string) => setBookTitle(newValue)}
+          width={inputWidth}
         />
       </div>
       <div className="add-book-row">
@@ -43,6 +46,7 @@ const AddBook: React.FC<AddBookProps> = (props) => {
         <CustomInput
           placeholder="Book author"
           onInputChange={(newValue: string) => setBookAuthor(newValue)}
+          width={inputWidth}
         />
       </div>
       <div className="add-book-row big-margin">
@@ -52,6 +56,7 @@ const AddBook: React.FC<AddBookProps> = (props) => {
           onInputChange={(newValue: string) => setBookDescription(newValue)}
           maxChars={300}
           isTextArea
+          width={inputWidth}
         />
       </div>
       <CustomButton text="Save" onClick={() => handleBookSave()} />

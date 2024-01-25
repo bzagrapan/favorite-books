@@ -8,20 +8,16 @@
 
 .add-book-row {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
 
   @media (max-width: $breakpoint-mobile) {
-    justify-content: center;
+    width: 310px;
+    margin: auto;
   }
 }
 
 .add-book-row-label {
-  width: 100px;
-  margin: auto;
-
-  @media (max-width: $breakpoint-mobile) {
-    margin: 0;
-  }
+  margin: auto 0;
 }
 
 .big-margin {
